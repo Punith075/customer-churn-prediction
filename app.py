@@ -107,6 +107,49 @@ div[data-testid="stVerticalBlockBorderWrapper"] {
 .stTabs [data-baseweb="tab"] { background:#15243A; border-radius:9px 9px 0 0; }
 hr { border-color:#263650; }
 small, .stCaption { color:#91A4BF !important; }
+
+/* High-contrast labels for all prediction form controls */
+[data-testid="stWidgetLabel"],
+[data-testid="stWidgetLabel"] *,
+[data-testid="stWidgetLabel"] p,
+[data-testid="stWidgetLabel"] label,
+[data-testid="stSlider"] label,
+[data-testid="stSelectbox"] label,
+[data-testid="stNumberInput"] label,
+[data-testid="stTextInput"] label,
+[data-testid="stRadio"] label,
+[data-testid="stCheckbox"] label,
+[data-testid="stMultiSelect"] label,
+.stSelectbox label,
+.stSlider label,
+.stNumberInput label,
+.stTextInput label {
+    color: #EAF2FF !important;
+    opacity: 1 !important;
+    font-weight: 600 !important;
+}
+
+/* Streamlit sometimes renders widget labels as markdown paragraphs */
+[data-testid="stWidgetLabel"] p,
+[data-testid="stWidgetLabel"] div {
+    color: #EAF2FF !important;
+}
+
+/* Make slider values, min/max values and help text readable */
+[data-testid="stSlider"] [data-testid="stThumbValue"],
+[data-testid="stSlider"] [data-testid="stTickBarMin"],
+[data-testid="stSlider"] [data-testid="stTickBarMax"],
+[data-testid="stSlider"] [data-testid="stMarkdownContainer"] p {
+    color: #DCE8F8 !important;
+}
+
+/* Keep section headings bright on the dark form panel */
+[data-testid="stForm"] h1,
+[data-testid="stForm"] h2,
+[data-testid="stForm"] h3,
+[data-testid="stForm"] h4 {
+    color: #FFFFFF !important;
+}
 footer { visibility:hidden; }
 </style>
 """, unsafe_allow_html=True)
